@@ -1,0 +1,1754 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation pour linux">
+      
+      
+        <meta name="author" content="n0LSA">
+      
+      
+        <link rel="canonical" href="https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/destructuration.html">
+      
+      
+        <link rel="prev" href="Objet%20-%20notation%20dynamique.html">
+      
+      
+        <link rel="next" href="javascript.html">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Destructuration - documentation_programmation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentation-complete-la-destructuration-de-tableau-en-javascript" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="documentation_programmation" class="md-header__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            documentation_programmation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Destructuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-green"  aria-label="Basculer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Basculer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="deep-orange"  aria-label="Basculer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Basculer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/n0LSA/documentation_programmation" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    documentation_programmation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="L%E2%80%99op%C3%A9rateur%20....html" class="md-tabs__link">
+          
+  
+  01 NOTES
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../javascript/methods-class/Array/map/map-p1.html" class="md-tabs__link">
+          
+  
+  Javascript
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="documentation_programmation" class="md-nav__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
+
+    </a>
+    documentation_programmation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/n0LSA/documentation_programmation" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    documentation_programmation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    01 NOTES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 NOTES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02 QUOTIDIENNES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            02 QUOTIDIENNES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_1" id="__nav_1_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    20250104
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            20250104
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="L%E2%80%99op%C3%A9rateur%20....html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L’opérateur ...
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Objet%20-%20notation%20dynamique.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objet   notation dynamique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Destructuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="destructuration.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Destructuration
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-et-histoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction et histoire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definitions-et-terminologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Définitions et terminologies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-les-differentes-syntaxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Les différentes syntaxes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Les différentes syntaxes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-destructuration-basique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Destructuration basique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-saut-delements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Saut d’éléments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-recuperer-le-reste-des-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Récupérer le “reste” des éléments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-valeurs-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Valeurs par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-destructuration-imbriquee" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Destructuration imbriquée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-differentes-utilisations-de-la-destructuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Différentes utilisations de la destructuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Différentes utilisations de la destructuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-affectation-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Affectation de variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-echange-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Échange de variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-extraction-de-donnees-dun-tableau-retourne-par-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Extraction de données d’un tableau retourné par une fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-iterer-sur-un-tableau-de-paires-cle-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Itérer sur un tableau de paires (clé-valeur)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-utilisations-les-plus-courantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Utilisations les plus courantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-risques-derreurs-et-pieges-courants" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Risques d’erreurs et pièges courants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Risques d’erreurs et pièges courants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-conflit-avec-les-parentheses" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Conflit avec les parenthèses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-variables-deja-declarees-et-affectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Variables déjà déclarées et affectation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-absence-delements-suffisants-dans-le-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Absence d’éléments suffisants dans le tableau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-attention-aux-valeurs-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Attention aux valeurs par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-confusion-entre-la-notation-litterale-et-la-notation-dynamique-pour-les-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Confusion entre la notation littérale et la notation dynamique pour les objets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-exemples-corrects-et-incorrects" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Exemples corrects et incorrects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Exemples corrects et incorrects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-correct-destructuration-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Correct : destructuration simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-correct-utilisation-du-reste" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Correct : utilisation du reste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-correct-valeurs-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Correct : valeurs par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-incorrect-confusion-de-syntaxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Incorrect : confusion de syntaxe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-incorrect-redeclaration-inconsideree" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5. Incorrect : redéclaration inconsidérée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Methods class
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Methods class
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Array
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Array
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1_1" id="__nav_2_1_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Map
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Map
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/methods-class/Array/map/map-p1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map p1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-et-histoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction et histoire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definitions-et-terminologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Définitions et terminologies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-les-differentes-syntaxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Les différentes syntaxes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Les différentes syntaxes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-destructuration-basique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Destructuration basique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-saut-delements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Saut d’éléments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-recuperer-le-reste-des-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Récupérer le “reste” des éléments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-valeurs-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Valeurs par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-destructuration-imbriquee" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Destructuration imbriquée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-differentes-utilisations-de-la-destructuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Différentes utilisations de la destructuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Différentes utilisations de la destructuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-affectation-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Affectation de variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-echange-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Échange de variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-extraction-de-donnees-dun-tableau-retourne-par-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Extraction de données d’un tableau retourné par une fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-iterer-sur-un-tableau-de-paires-cle-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Itérer sur un tableau de paires (clé-valeur)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-utilisations-les-plus-courantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Utilisations les plus courantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-risques-derreurs-et-pieges-courants" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Risques d’erreurs et pièges courants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Risques d’erreurs et pièges courants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-conflit-avec-les-parentheses" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Conflit avec les parenthèses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-variables-deja-declarees-et-affectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Variables déjà déclarées et affectation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-absence-delements-suffisants-dans-le-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Absence d’éléments suffisants dans le tableau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-attention-aux-valeurs-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Attention aux valeurs par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-confusion-entre-la-notation-litterale-et-la-notation-dynamique-pour-les-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Confusion entre la notation littérale et la notation dynamique pour les objets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-exemples-corrects-et-incorrects" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Exemples corrects et incorrects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Exemples corrects et incorrects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-correct-destructuration-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Correct : destructuration simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-correct-utilisation-du-reste" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Correct : utilisation du reste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-correct-valeurs-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Correct : valeurs par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-incorrect-confusion-de-syntaxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Incorrect : confusion de syntaxe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-incorrect-redeclaration-inconsideree" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5. Incorrect : redéclaration inconsidérée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/n0LSA/documentation_programmation/raw/main/docs/01_NOTES/02_QUOTIDIENNES/20250104/destructuration.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<p><strong>Analyse du prompt et intentions</strong></p>
+<ol>
+<li>Rédiger une documentation complète sur la destructuration de tableau en JavaScript.</li>
+<li>Inclure :<ul>
+<li>Le terme utilisé et une brève histoire/contextualisation.</li>
+<li>Les différentes syntaxes.</li>
+<li>Les utilisations possibles et exemples d’usage.</li>
+<li>Les cas d’usage les plus courants.</li>
+<li>Les erreurs fréquentes ou pièges.</li>
+</ul>
+</li>
+<li>Fournir des exemples concrets, incluant des exemples corrects et incorrects.</li>
+</ol>
+<hr />
+<h1 id="documentation-complete-la-destructuration-de-tableau-en-javascript">Documentation complète : La destructuration de tableau en JavaScript<a class="headerlink" href="#documentation-complete-la-destructuration-de-tableau-en-javascript" title="Permanent link">&para;</a></h1>
+<h2 id="1-introduction-et-histoire">1. Introduction et histoire<a class="headerlink" href="#1-introduction-et-histoire" title="Permanent link">&para;</a></h2>
+<p>La <strong>destructuration de tableau</strong> (ou <em>Array Destructuring</em> en anglais) est une fonctionnalité introduite en <strong>ECMAScript 6 (ES2015)</strong>. L’idée fondatrice est de permettre le déballage (unpacking) succinct des éléments d’un tableau pour les affecter à des variables distinctes.</p>
+<p>Avant ES6, on écrivait souvent du code comme ceci :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">monTableau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">monTableau</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">monTableau</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">monTableau</span><span class="p">[</span><span class="mf">2</span><span class="p">];</span>
+</code></pre></div>
+<p>La destructuration rend ce procédé plus expressif et plus concis :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+</code></pre></div>
+<p>Cet ajout (inspiré d’autres langages) participe à rendre JavaScript plus moderne et plus lisible. En plus de la destructuration de tableau, ES6 a également introduit la <strong>destructuration d’objet</strong>, très similaire dans son concept.</p>
+<hr />
+<h2 id="2-definitions-et-terminologies">2. Définitions et terminologies<a class="headerlink" href="#2-definitions-et-terminologies" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Destructuration</strong> : Action de “décomposer” un tableau (ou un objet) en plusieurs variables, automatiquement.</li>
+<li><strong>Array Destructuring</strong> : Syntaxe spécifique permettant cette décomposition.</li>
+<li><strong>Pattern</strong> ou <strong>schéma de destructuration</strong> : Expression entourée de crochets (<code>[]</code>) qui indique comment extraire chaque élément du tableau.</li>
+</ul>
+<hr />
+<h2 id="3-les-differentes-syntaxes">3. Les différentes syntaxes<a class="headerlink" href="#3-les-differentes-syntaxes" title="Permanent link">&para;</a></h2>
+<h3 id="31-destructuration-basique">3.1. Destructuration basique<a class="headerlink" href="#31-destructuration-basique" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">varA</span><span class="p">,</span><span class="w"> </span><span class="nx">varB</span><span class="p">,</span><span class="w"> </span><span class="nx">varC</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
+</code></pre></div>
+<ul>
+<li>Ici, <code>varA = 10</code>, <code>varB = 20</code>, <code>varC = 30</code>.</li>
+<li>Si le tableau initial n’a pas assez d’éléments, les variables supplémentaires deviennent <code>undefined</code>.</li>
+<li>S’il a plus d’éléments, ceux non mentionnés dans le pattern de destructuration sont simplement ignorés.</li>
+</ul>
+<h3 id="32-saut-delements">3.2. Saut d’éléments<a class="headerlink" href="#32-saut-delements" title="Permanent link">&para;</a></h3>
+<p>Vous pouvez <strong>ignorer</strong> certains éléments du tableau en laissant un emplacement vide séparé par des virgules :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">premier</span><span class="p">,</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">troisieme</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">premier</span><span class="p">);</span><span class="w">   </span><span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">troisieme</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3</span>
+</code></pre></div>
+<ul>
+<li>Le deuxième élément (2) est ignoré parce qu’on a mis <code>, ,</code> pour sauter un emplacement.</li>
+<li>Les autres (4, 5) ne sont pas utilisés dans la destructuration et donc ignorés.</li>
+</ul>
+<h3 id="33-recuperer-le-reste-des-elements">3.3. Récupérer le “reste” des éléments<a class="headerlink" href="#33-recuperer-le-reste-des-elements" title="Permanent link">&para;</a></h3>
+<p>Grâce à <strong>l’opérateur de reste</strong> <code>...</code>, on peut extraire le reste du tableau dans une variable :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">reste</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span><span class="w">     </span><span class="c1">// 10</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span><span class="w">     </span><span class="c1">// 20</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">reste</span><span class="p">);</span><span class="w"> </span><span class="c1">// [30, 40, 50]</span>
+</code></pre></div>
+<ul>
+<li>Utile pour gérer un nombre variable d’arguments ou pour séparer les deux premiers éléments du tableau du reste.</li>
+</ul>
+<h3 id="34-valeurs-par-defaut">3.4. Valeurs par défaut<a class="headerlink" href="#34-valeurs-par-defaut" title="Permanent link">&para;</a></h3>
+<p>Si le tableau n’a pas assez d’éléments, vous pouvez définir des valeurs par défaut :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10 (extraite du tableau)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2  (défaut, car pas d’élément dans le tableau)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3  (défaut)</span>
+</code></pre></div>
+<ul>
+<li>Lorsque le tableau n’a qu’un seul élément (10), <code>b</code> et <code>c</code> ne trouvent pas de valeur, donc <code>b = 2</code> et <code>c = 3</code>.</li>
+</ul>
+<h3 id="35-destructuration-imbriquee">3.5. Destructuration imbriquée<a class="headerlink" href="#35-destructuration-imbriquee" title="Permanent link">&para;</a></h3>
+<p>Si un tableau contient lui-même d’autres tableaux, vous pouvez déstructurer en profondeur :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">]];</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">d</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mat</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">d</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1 2 3 4</span>
+</code></pre></div>
+<ul>
+<li>Ici, <code>mat[0]</code> est <code>[1, 2]</code>, donc <code>[a, b] = [1, 2]</code>.</li>
+<li><code>mat[1]</code> est <code>[3, 4]</code>, donc <code>[c, d] = [3, 4]</code>.</li>
+</ul>
+<hr />
+<h2 id="4-differentes-utilisations-de-la-destructuration">4. Différentes utilisations de la destructuration<a class="headerlink" href="#4-differentes-utilisations-de-la-destructuration" title="Permanent link">&para;</a></h2>
+<h3 id="41-affectation-de-variables">4.1. Affectation de variables<a class="headerlink" href="#41-affectation-de-variables" title="Permanent link">&para;</a></h3>
+<p>La forme la plus basique :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span>
+</code></pre></div>
+<p>Mais on peut aussi faire l’affectation <strong>après</strong> la déclaration des variables :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span>
+</code></pre></div>
+<p>Utile quand vous avez déjà déclaré <code>a</code> et <code>b</code>, et que vous voulez simplement leur affecter de nouvelles valeurs.</p>
+<h3 id="42-echange-de-variables">4.2. Échange de variables<a class="headerlink" href="#42-echange-de-variables" title="Permanent link">&para;</a></h3>
+<p>Un cas d’usage très courant :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="p">[</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2, 1</span>
+</code></pre></div>
+<p>Plus besoin d’une variable temporaire pour échanger (swap) deux valeurs.</p>
+<h3 id="43-extraction-de-donnees-dun-tableau-retourne-par-une-fonction">4.3. Extraction de données d’un tableau retourné par une fonction<a class="headerlink" href="#43-extraction-de-donnees-dun-tableau-retourne-par-une-fonction" title="Permanent link">&para;</a></h3>
+<p>Par exemple, imaginons une fonction qui renvoie <code>[résultat, erreur]</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calcul</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">b</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Division par zéro&#39;</span><span class="p">];</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">resultat</span><span class="p">,</span><span class="w"> </span><span class="nx">erreur</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calcul</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">erreur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">erreur</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultat</span><span class="p">);</span><span class="w"> </span><span class="c1">// 5</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>On sépare clairement la valeur de retour (<code>résultat</code>) et la potentialité d’erreur (<code>erreur</code>).</p>
+<h3 id="44-iterer-sur-un-tableau-de-paires-cle-valeur">4.4. Itérer sur un tableau de paires (clé-valeur)<a class="headerlink" href="#44-iterer-sur-un-tableau-de-paires-cle-valeur" title="Permanent link">&para;</a></h3>
+<p>On peut utiliser la destructuration avec la méthode <code>Array.prototype.map</code>, <code>forEach</code>, ou <code>reduce</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">keyValuePairs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">[</span><span class="s1">&#39;clé1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;valeur1&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[</span><span class="s1">&#39;clé2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;valeur2&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nx">keyValuePairs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(([</span><span class="nx">k</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="p">])</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Clé = </span><span class="si">${</span><span class="nx">k</span><span class="si">}</span><span class="sb">, Valeur = </span><span class="si">${</span><span class="nx">v</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Au lieu de manipuler <code>pair[0]</code> et <code>pair[1]</code>, on gagne en lisibilité : <code>[k, v]</code>.</p>
+<hr />
+<h2 id="5-utilisations-les-plus-courantes">5. Utilisations les plus courantes<a class="headerlink" href="#5-utilisations-les-plus-courantes" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Échange de variables</strong> : <code>[a, b] = [b, a]</code>.</li>
+<li><strong>Extraction rapide</strong> des premiers éléments d’un tableau, ou pour ignorer certains éléments.</li>
+<li><strong>Récupération du reste</strong> (rest) d’un tableau.</li>
+<li><strong>Obtenir plusieurs sorties</strong> d’une fonction (pattern “tuple”).</li>
+<li><strong>Transformation</strong> d’un tableau de paires en un objet, ou itération plus lisible (ex. en configuration).</li>
+</ol>
+<hr />
+<h2 id="6-risques-derreurs-et-pieges-courants">6. Risques d’erreurs et pièges courants<a class="headerlink" href="#6-risques-derreurs-et-pieges-courants" title="Permanent link">&para;</a></h2>
+<h3 id="61-conflit-avec-les-parentheses">6.1. Conflit avec les parenthèses<a class="headerlink" href="#61-conflit-avec-les-parentheses" title="Permanent link">&para;</a></h3>
+<p>Lorsque vous utilisez la destructuration dans une expression qui est précédée d’un mot-clé (<code>let</code>, <code>const</code>, etc.), JavaScript s’attend à une déclaration.</p>
+<ul>
+<li>
+<p><strong>Exemple incorrect</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Mauvais : JavaScript interprète les accolades comme un bloc</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">]</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+<p>Cela peut provoquer une erreur de syntaxe ou un comportement inattendu si JavaScript croit voir une IIFE (Immediately Invoked Function Expression) ou un bloc vide.</p>
+<ul>
+<li>
+<p><strong>Solution</strong> : Supprimer les parenthèses ou déplacer la destructuration pour qu’elle soit clairement une affectation :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span><span class="w"> </span><span class="c1">// OK</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="62-variables-deja-declarees-et-affectation">6.2. Variables déjà déclarées et affectation<a class="headerlink" href="#62-variables-deja-declarees-et-affectation" title="Permanent link">&para;</a></h3>
+<p>Destructurer directement dans une déclaration est différent de destructurer dans une affectation.</p>
+<ul>
+<li>
+<p><strong>Exemple incorrect</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// Erreur : redeclaration of let variable</span>
+<span class="p">[</span><span class="nx">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">];</span>
+</code></pre></div>
+<p>Vous ne pouvez pas redéclarer deux fois la même variable avec <code>let</code>.</p>
+</li>
+</ul>
+<h3 id="63-absence-delements-suffisants-dans-le-tableau">6.3. Absence d’éléments suffisants dans le tableau<a class="headerlink" href="#63-absence-delements-suffisants-dans-le-tableau" title="Permanent link">&para;</a></h3>
+<p>Si le tableau a moins d’éléments que les variables attendues, celles-ci valent <code>undefined</code>. Cela ne provoque pas d’erreur en soi, mais peut être source de bugs si vous vous attendez à une valeur existante.</p>
+<ul>
+<li>
+<p><strong>Exemple</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined, possible source de bug</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="64-attention-aux-valeurs-par-defaut">6.4. Attention aux valeurs par défaut<a class="headerlink" href="#64-attention-aux-valeurs-par-defaut" title="Permanent link">&para;</a></h3>
+<p>Si vous mettez une <strong>valeur par défaut</strong>, rappelez-vous qu’elle ne s’active que si l’élément destructuré vaut <code>undefined</code>, et non <code>null</code>.</p>
+<ul>
+<li>
+<p><strong>Exemple</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// null, et non 100</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="65-confusion-entre-la-notation-litterale-et-la-notation-dynamique-pour-les-objets">6.5. Confusion entre la notation littérale et la notation dynamique pour les objets<a class="headerlink" href="#65-confusion-entre-la-notation-litterale-et-la-notation-dynamique-pour-les-objets" title="Permanent link">&para;</a></h3>
+<p>Pour la destructuration d’objets, on utilise <code>{ ... }</code>. Pour les tableaux, <code>[ ... ]</code>.</p>
+<ul>
+<li>
+<p><strong>Exemple incorrect</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Mauvais, on a un tableau mais on utilise des accolades</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span>
+<span class="c1">// TypeError: Cannot destructure property `a` of &#39;[object Array]&#39; as it is undefined.</span>
+</code></pre></div>
+</li>
+</ul>
+<hr />
+<h2 id="7-exemples-corrects-et-incorrects">7. Exemples corrects et incorrects<a class="headerlink" href="#7-exemples-corrects-et-incorrects" title="Permanent link">&para;</a></h2>
+<h3 id="71-correct-destructuration-simple">7.1. Correct : destructuration simple<a class="headerlink" href="#71-correct-destructuration-simple" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Correct</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">// Alice</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span><span class="w"> </span><span class="c1">// 25</span>
+</code></pre></div>
+<h3 id="72-correct-utilisation-du-reste">7.2. Correct : utilisation du reste<a class="headerlink" href="#72-correct-utilisation-du-reste" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Correct</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">others</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span><span class="w">       </span><span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">others</span><span class="p">);</span><span class="w">  </span><span class="c1">// [2, 3, 4]</span>
+</code></pre></div>
+<h3 id="73-correct-valeurs-par-defaut">7.3. Correct : valeurs par défaut<a class="headerlink" href="#73-correct-valeurs-par-defaut" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Correct</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2 (default)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3 (default)</span>
+</code></pre></div>
+<h3 id="74-incorrect-confusion-de-syntaxe">7.4. Incorrect : confusion de syntaxe<a class="headerlink" href="#74-incorrect-confusion-de-syntaxe" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Incorrect : on croit faire une destructuration de tableau, mais on utilise des {} </span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span><span class="w">  </span>
+<span class="c1">// TypeError: Cannot destructure property &#39;d&#39; ...</span>
+
+<span class="c1">// Correct : on doit utiliser des []</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span><span class="w">  </span>
+</code></pre></div>
+<h3 id="75-incorrect-redeclaration-inconsideree">7.5. Incorrect : redéclaration inconsidérée<a class="headerlink" href="#75-incorrect-redeclaration-inconsideree" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="c1">// Incorrect : on essaie de redéclarer a avec let</span>
+<span class="kd">let</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span><span class="w">  </span><span class="c1">// SyntaxError</span>
+
+<span class="c1">// Correct</span>
+<span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+</code></pre></div>
+<hr />
+<h2 id="8-conclusion">8. Conclusion<a class="headerlink" href="#8-conclusion" title="Permanent link">&para;</a></h2>
+<p>La destructuration de tableau est une fonctionnalité essentielle en JavaScript moderne. Elle permet d’écrire un code plus concis, plus lisible et d’éviter de longues affectations répétitives. Voici les principaux points à retenir :</p>
+<ol>
+<li>
+<p><strong>Syntaxe</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">valA</span><span class="p">,</span><span class="w"> </span><span class="nx">valB</span><span class="p">,</span><span class="w"> </span><span class="nx">valC</span><span class="p">];</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Avantages</strong> :</p>
+<ul>
+<li>Facilite l’extraction d’éléments dans une structure complexe.</li>
+<li>Permet de gérer la logique de valeurs par défaut.</li>
+<li>Simplifie l’écriture d’itérations et le traitement des données sous forme de liste.</li>
+</ul>
+</li>
+<li><strong>Points de vigilance</strong> :<ul>
+<li>Les éléments manquants du tableau donnent <code>undefined</code>.</li>
+<li>Attention à la syntaxe (parenthèses, accolades, etc.).</li>
+<li>Pas de réaffectation/rédéclaration illégale de variables.</li>
+</ul>
+</li>
+</ol>
+<p>Bien maîtriser la destructuration de tableau (et d’objet) est devenu incontournable pour tout développeur travaillant avec un code JavaScript moderne, car elle apporte à la fois lisibilité et souplesse dans l’écriture du code.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/n0LSA/documentation_programmation" target="_blank" rel="noopener" title="dépôt github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
