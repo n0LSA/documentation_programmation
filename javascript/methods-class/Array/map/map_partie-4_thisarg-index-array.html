@@ -12,22 +12,26 @@
         <meta name="author" content="n0LSA">
       
       
+        <link rel="canonical" href="https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map_partie-4_thisarg-index-array.html">
+      
+      
+        <link rel="prev" href="map_partie-3_index-array.html">
       
       
       
-      <link rel="icon" href="/documentation_programmation/assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>documentation_programmation</title>
+        <title>Map partie 4 thisarg index array - documentation_programmation</title>
       
     
     
-      <link rel="stylesheet" href="/documentation_programmation/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/documentation_programmation/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -40,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="/documentation_programmation/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/documentation_programmation/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#utilisation-combinee-de-thisarg-index-et-array" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/documentation_programmation/." title="documentation_programmation" class="md-header__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+    <a href="../../../.." title="documentation_programmation" class="md-header__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Map partie 4 thisarg index array
             
           </span>
         </div>
@@ -218,7 +227,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-tabs__link">
+        <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-tabs__link">
           
   
   01 NOTES
@@ -238,17 +247,7 @@
         
   
   
-  
     
-    
-      
-  
-  
-  
-    
-    
-      
-  
   
   
     
@@ -256,11 +255,29 @@
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html" class="md-tabs__link">
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../filter/filter_partie-1.html" class="md-tabs__link">
           
   
   Javascript
@@ -302,7 +319,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/documentation_programmation/." title="documentation_programmation" class="md-nav__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+    <a href="../../../.." title="documentation_programmation" class="md-nav__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
@@ -446,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/Objet%20-%20notation%20dynamique.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/Objet%20-%20notation%20dynamique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/destructuration.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/destructuration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/javascript.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/javascript.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -597,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,23 +655,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -665,7 +687,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Javascript
@@ -676,6 +698,8 @@
                 
   
   
+    
+  
   
   
     
@@ -685,11 +709,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -703,7 +727,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Methods class
@@ -714,6 +738,8 @@
                 
   
   
+    
+  
   
   
     
@@ -723,11 +749,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
@@ -741,7 +767,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             Array
@@ -793,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html" class="md-nav__link">
+      <a href="../filter/filter_partie-1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-2.html" class="md-nav__link">
+      <a href="../filter/filter_partie-2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,6 +866,8 @@
                 
   
   
+    
+  
   
   
     
@@ -849,11 +877,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
@@ -867,7 +895,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1_2">
             <span class="md-nav__icon md-icon"></span>
             Map
@@ -881,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-1.html" class="md-nav__link">
+      <a href="map_partie-1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-2_thisarg.html" class="md-nav__link">
+      <a href="map_partie-2_thisarg.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -923,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-3_index-array.html" class="md-nav__link">
+      <a href="map_partie-3_index-array.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,10 +969,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-4_thisarg-index-array.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Map partie 4 thisarg index array
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="map_partie-4_thisarg-index-array.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -953,6 +999,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-combinee-de-thisarg-index-et-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      utilisation combinée de thisArg, index et array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="utilisation combinée de thisArg, index et array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-utilisation-de-thisarg-pour-acceder-aux-proprietes-dun-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Utilisation de thisArg pour Accéder aux Propriétés d'un Objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilisation-de-index-pour-des-transformations-basees-sur-la-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilisation de index pour des Transformations Basées sur la Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-utilisation-de-array-pour-des-comparaisons-ou-des-calculs-globaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Utilisation de array pour des Comparaisons ou des Calculs Globaux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-combinaison-de-thisarg-index-et-array-pour-une-logique-complexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Combinaison de thisArg, index et array pour une Logique Complexe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1007,6 +1122,65 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-combinee-de-thisarg-index-et-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      utilisation combinée de thisArg, index et array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="utilisation combinée de thisArg, index et array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-utilisation-de-thisarg-pour-acceder-aux-proprietes-dun-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Utilisation de thisArg pour Accéder aux Propriétés d'un Objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilisation-de-index-pour-des-transformations-basees-sur-la-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilisation de index pour des Transformations Basées sur la Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-utilisation-de-array-pour-des-comparaisons-ou-des-calculs-globaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Utilisation de array pour des Comparaisons ou des Calculs Globaux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-combinaison-de-thisarg-index-et-array-pour-une-logique-complexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Combinaison de thisArg, index et array pour une Logique Complexe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1017,8 +1191,108 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+    
+      
+    
+    <a href="https://github.com/n0LSA/documentation_programmation/raw/main/docs/javascript/methods-class/Array/map/map_partie-4_thisarg-index-array.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+  <h1>Map partie 4 thisarg index array</h1>
+
+<h2 id="utilisation-combinee-de-thisarg-index-et-array">utilisation combinée de thisArg, index et array<a class="headerlink" href="#utilisation-combinee-de-thisarg-index-et-array" title="Permanent link">&para;</a></h2>
+<h3 id="1-utilisation-de-thisarg-pour-acceder-aux-proprietes-dun-objet">1. Utilisation de <code>thisArg</code> pour Accéder aux Propriétés d'un Objet<a class="headerlink" href="#1-utilisation-de-thisarg-pour-acceder-aux-proprietes-dun-objet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Transformer des Éléments en Utilisant une Propriété d'Objet :</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">scaleNumber</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">scaleFactor</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">scaleContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">scaleFactor</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">scaledNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">scaleNumber</span><span class="p">,</span><span class="w"> </span><span class="nx">scaleContext</span><span class="p">);</span>
+
+<span class="c1">// Résultat : [10, 20, 30, 40, 50]</span>
+</code></pre></div>
+<h3 id="2-utilisation-de-index-pour-des-transformations-basees-sur-la-position">2. Utilisation de <code>index</code> pour des Transformations Basées sur la Position<a class="headerlink" href="#2-utilisation-de-index-pour-des-transformations-basees-sur-la-position" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Marquage des Éléments Basé sur leur Indice :</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;item1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;item2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;item3&#39;</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">markedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb"> - Position: </span><span class="si">${</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb"> sur </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">totalItems</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+
+<span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">totalItems</span><span class="o">:</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="p">});</span>
+
+<span class="c1">// Résultat : [&quot;item1 - Position: 1 sur 3&quot;, &quot;item2 - Position: 2 sur 3&quot;, ...]</span>
+</code></pre></div>
+<h3 id="3-utilisation-de-array-pour-des-comparaisons-ou-des-calculs-globaux">3. Utilisation de <code>array</code> pour des Comparaisons ou des Calculs Globaux<a class="headerlink" href="#3-utilisation-de-array-pour-des-comparaisons-ou-des-calculs-globaux" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Calculs Impliquant le Tableau Entier :</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">percentages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">curr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">curr</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+
+<span class="k">return</span><span class="w"> </span><span class="sb">`Number: </span><span class="si">${</span><span class="nx">number</span><span class="si">}</span><span class="sb">, Share: </span><span class="si">${</span><span class="p">(</span><span class="nx">number</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span><span class="si">}</span><span class="sb">%`</span><span class="p">;</span>
+
+<span class="p">});</span>
+
+<span class="c1">// Résultat : [&quot;Number: 2, Share: 6.67%&quot;, &quot;Number: 3, Share: 10.00%&quot;, ...]</span>
+</code></pre></div>
+<h3 id="4-combinaison-de-thisarg-index-et-array-pour-une-logique-complexe">4. Combinaison de <code>thisArg</code>, <code>index</code> et <code>array</code> pour une Logique Complexe<a class="headerlink" href="#4-combinaison-de-thisarg-index-et-array-pour-une-logique-complexe" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Utilisation Complète des Trois Arguments pour une Logique Personnalisée :</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">customTransform</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="sb">`Element: </span><span class="si">${</span><span class="nx">element</span><span class="si">}</span><span class="sb">, Scaled by: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">scaleFactor</span><span class="si">}</span><span class="sb">, Position: </span><span class="si">${</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">, Total Elements: </span><span class="si">${</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transformContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">scaleFactor</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transformedElements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elements</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">customTransform</span><span class="p">,</span><span class="w"> </span><span class="nx">transformContext</span><span class="p">);</span>
+
+<span class="c1">// Résultat : [&quot;Element: 10, Scaled by: 2, Position: 1, Total Elements: 3&quot;, ...]</span>
+</code></pre></div>
+<p>Dans ces exemples, <code>thisArg</code> est utilisé pour fournir un contexte externe (comme un objet avec des propriétés spécifiques) à la fonction de rappel. L'argument <code>index</code> est utilisé pour accéder à la position actuelle de l'élément dans le tableau, et <code>array</code> est utilisé pour effectuer des opérations qui impliquent une vision globale du tableau, comme des calculs impliquant tous les éléments.</p>
+<p>Ces exemples montrent la flexibilité et la puissance de <code>map()</code> pour effectuer des transformations complexes sur des tableaux, tout en fournissant un contrôle fin sur le contexte et en accédant à des informations détaillées sur chaque élément et le tableau dans son ensemble.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1072,12 +1346,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/documentation_programmation/", "features": ["content.action.view", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "/documentation_programmation/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.view", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/documentation_programmation/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="/documentation_programmation/javascripts/config.js"></script>
+        <script src="../../../../javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

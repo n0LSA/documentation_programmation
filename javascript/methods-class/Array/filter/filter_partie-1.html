@@ -12,11 +12,13 @@
         <meta name="author" content="n0LSA">
       
       
-        <link rel="canonical" href="https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map-p1.html">
+        <link rel="canonical" href="https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html">
       
       
-        <link rel="prev" href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/javascript.html">
+        <link rel="prev" href="../../../../01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html">
       
+      
+        <link rel="next" href="filter_partie-2.html">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -24,7 +26,7 @@
     
     
       
-        <title>Map p1 - documentation_programmation</title>
+        <title>Filter partie 1 - documentation_programmation</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#la-fonction-map" class="md-skip">
+        <a href="#syntaxe-de-base" class="md-skip">
           Aller au contenu
         </a>
       
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Map p1
+              Filter partie 1
             
           </span>
         </div>
@@ -277,7 +279,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="map-p1.html" class="md-tabs__link">
+        <a href="filter_partie-1.html" class="md-tabs__link">
           
   
   Javascript
@@ -548,6 +550,94 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    20250112
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            20250112
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP PATCH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation JavaScript - Synthèse des Sujets Abordés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -712,7 +802,7 @@
             
   
   <span class="md-ellipsis">
-    Map
+    Filter
   </span>
   
 
@@ -722,7 +812,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1_1">
             <span class="md-nav__icon md-icon"></span>
-            Map
+            Filter
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -744,18 +834,18 @@
           
   
   <span class="md-ellipsis">
-    Map p1
+    Filter partie 1
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="map-p1.html" class="md-nav__link md-nav__link--active">
+      <a href="filter_partie-1.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Map p1
+    Filter partie 1
   </span>
   
 
@@ -775,43 +865,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-fonction-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      la fonction map
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="la fonction map">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#syntaxe-de-base" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntaxe de base
+      Syntaxe de base :
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#fonctionnement-de-map" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-de-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      Fonctionnement de map()
+      Fonctionnement de filter() :
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#exemple-dutilisation" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemple d'Utilisation
+      Exemple d'Utilisation :
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#utilisations-courantes-de-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisations courantes de filter() :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de thisArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-sans-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Sans thisArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-avec-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Avec thisArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#points-importants" class="md-nav__link">
     <span class="md-ellipsis">
       Points Importants
@@ -819,131 +935,39 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#exemples-simple" class="md-nav__link">
+  <a href="#exemples" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemples simple
+      Exemples
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exemples simple">
+    <nav class="md-nav" aria-label="Exemples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-transformation-delements" class="md-nav__link">
+  <a href="#filtrage-base-sur-une-propriete-dobjet" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Transformation d'Éléments
+      Filtrage Basé sur une Propriété d'Objet
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-extraction-de-proprietes-dobjets" class="md-nav__link">
+  <a href="#filtrage-en-utilisant-les-methodes-de-lobjet" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Extraction de Propriétés d'Objets
+      Filtrage en Utilisant les Méthodes de l'Objet
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-conversion-de-types-de-donnees" class="md-nav__link">
+  <a href="#utilisation-avec-des-methodes-de-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Conversion de Types de Données
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-appliquer-une-fonction-complexes" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Appliquer une Fonction Complexes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-creation-de-nouvelles-structures-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Création de Nouvelles Structures de Données
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-combinaison-avec-dautres-methodes-de-tableau" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Combinaison avec d'autres Méthodes de Tableau
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-mappage-avec-index-ou-tableau-complet" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Mappage avec Index ou Tableau Complet
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-operations-mathematiques-ou-algorithmiques" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Opérations Mathématiques ou Algorithmiques
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thisarg" class="md-nav__link">
-    <span class="md-ellipsis">
-      thisArg
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="thisArg">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple-sans-thisarg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple sans thisArg
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple-avec-thisarg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple avec thisArg
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#points-importants_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Points Importants
+      Utilisation avec des Méthodes de Classe
     </span>
   </a>
   
@@ -958,6 +982,157 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="filter_partie-2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter partie 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Map
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Map
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map/map_partie-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map partie 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map/map_partie-2_thisarg.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map partie 2 thisarg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map/map_partie-3_index-array.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map partie 3 index array
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map/map_partie-4_thisarg-index-array.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map partie 4 thisarg index array
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1019,43 +1194,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-fonction-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      la fonction map
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="la fonction map">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#syntaxe-de-base" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntaxe de base
+      Syntaxe de base :
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#fonctionnement-de-map" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-de-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      Fonctionnement de map()
+      Fonctionnement de filter() :
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#exemple-dutilisation" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemple d'Utilisation
+      Exemple d'Utilisation :
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#utilisations-courantes-de-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisations courantes de filter() :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de thisArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-sans-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Sans thisArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-avec-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Avec thisArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#points-importants" class="md-nav__link">
     <span class="md-ellipsis">
       Points Importants
@@ -1063,131 +1264,39 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#exemples-simple" class="md-nav__link">
+  <a href="#exemples" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemples simple
+      Exemples
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exemples simple">
+    <nav class="md-nav" aria-label="Exemples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-transformation-delements" class="md-nav__link">
+  <a href="#filtrage-base-sur-une-propriete-dobjet" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Transformation d'Éléments
+      Filtrage Basé sur une Propriété d'Objet
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-extraction-de-proprietes-dobjets" class="md-nav__link">
+  <a href="#filtrage-en-utilisant-les-methodes-de-lobjet" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Extraction de Propriétés d'Objets
+      Filtrage en Utilisant les Méthodes de l'Objet
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-conversion-de-types-de-donnees" class="md-nav__link">
+  <a href="#utilisation-avec-des-methodes-de-classe" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Conversion de Types de Données
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-appliquer-une-fonction-complexes" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Appliquer une Fonction Complexes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-creation-de-nouvelles-structures-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Création de Nouvelles Structures de Données
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-combinaison-avec-dautres-methodes-de-tableau" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Combinaison avec d'autres Méthodes de Tableau
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-mappage-avec-index-ou-tableau-complet" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Mappage avec Index ou Tableau Complet
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-operations-mathematiques-ou-algorithmiques" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Opérations Mathématiques ou Algorithmiques
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thisarg" class="md-nav__link">
-    <span class="md-ellipsis">
-      thisArg
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="thisArg">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple-sans-thisarg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple sans thisArg
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple-avec-thisarg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple avec thisArg
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#points-importants_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Points Importants
+      Utilisation avec des Méthodes de Classe
     </span>
   </a>
   
@@ -1217,239 +1326,115 @@
     
       
     
-    <a href="https://github.com/n0LSA/documentation_programmation/raw/main/docs/javascript/methods-class/Array/map/map-p1.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+    <a href="https://github.com/n0LSA/documentation_programmation/raw/main/docs/javascript/methods-class/Array/filter/filter_partie-1.md" title="Consulter la source de cette page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
   
 
 
-  <h1>Map p1</h1>
+  <h1>Filter partie 1</h1>
 
-<div class="highlight"><pre><span></span><code>title: 
-style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
-minLevel: 0 # Include headings from the specified level
-maxLevel: 0 # Include headings up to the specified level
-includeLinks: true # Make headings clickable
-debugInConsole: false # Print debug info in Obsidian console
-</code></pre></div>
-<h2 id="la-fonction-map">la fonction map<a class="headerlink" href="#la-fonction-map" title="Permanent link">&para;</a></h2>
-<p>La fonction <code>map()</code> en JavaScript est une méthode de prototype d'Array qui est utilisée pour transformer les éléments d'un tableau en appliquant une fonction à chaque élément du tableau. Cette méthode renvoie un nouveau tableau contenant les résultats de l'application de la fonction à chaque élément. Elle ne modifie pas le tableau original.</p>
-<h3 id="syntaxe-de-base">Syntaxe de base<a class="headerlink" href="#syntaxe-de-base" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nouveauTableau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tableauOriginal</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p>La fonction <code>filter()</code> en JavaScript est une méthode de tableau qui permet de créer un nouveau tableau contenant seulement les éléments qui passent un test spécifié par une fonction. C'est un outil puissant pour filtrer des ensembles de données selon des critères définis. Voici une description plus détaillée :</p>
+<h2 id="syntaxe-de-base">Syntaxe de base :<a class="headerlink" href="#syntaxe-de-base" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">array</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-<span class="c1">// Logique de transformation</span>
+<span class="c1">// condition de test</span>
 
 <span class="p">},</span><span class="w"> </span><span class="nx">thisArg</span><span class="p">);</span>
 </code></pre></div>
 <ul>
 <li>
-<p><strong>tableauOriginal</strong> : Le tableau sur lequel <code>map()</code> est appelé.</p>
+<p><strong>array</strong> : Le tableau sur lequel la méthode <code>filter()</code> est appelée.</p>
 </li>
 <li>
 <p><strong>function(element, index, array)</strong> : La fonction de rappel exécutée sur chaque élément du tableau.</p>
 </li>
 <li>
-<p><strong>element</strong> : L'élément courant du tableau.</p>
+<p><strong>element</strong> : L'élément courant du tableau en cours de traitement.</p>
 </li>
 <li>
 <p><strong>index</strong> (optionnel) : L'indice de l'élément courant dans le tableau.</p>
 </li>
 <li>
-<p><strong>array</strong> (optionnel) : Le tableau sur lequel <code>map()</code> a été appelé.</p>
+<p><strong>array</strong> (optionnel) : Le tableau sur lequel la méthode <code>filter()</code> a été appelée.</p>
 </li>
 <li>
-<p><strong>thisArg</strong> (optionnel) : La valeur à utiliser comme <code>this</code> lors de l'exécution de la fonction de rappel.</p>
+<p><strong>thisArg</strong> (optionnel) : Une valeur à utiliser comme <code>this</code> lors de l'exécution de la fonction de rappel.</p>
 </li>
 <li>
-<p><strong>nouveauTableau</strong> : Le nouveau tableau résultant, contenant les éléments transformés.</p>
+<p><strong>resultArray</strong> : Le nouveau tableau créé, contenant tous les éléments pour lesquels la fonction de rappel a renvoyé une valeur truthy (qui évalue à <code>true</code>).</p>
 </li>
 </ul>
-<h3 id="fonctionnement-de-map">Fonctionnement de <code>map()</code><a class="headerlink" href="#fonctionnement-de-map" title="Permanent link">&para;</a></h3>
+<h2 id="fonctionnement-de-filter">Fonctionnement de <code>filter()</code> :<a class="headerlink" href="#fonctionnement-de-filter" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p><strong>Itération sur le Tableau</strong></p>
+<p><strong>Itération sur le Tableau :</strong></p>
 </li>
 <li>
-<p><code>map()</code> passe en revue chaque élément du tableau <code>tableauOriginal</code>.</p>
+<p><code>filter()</code> passe en revue chaque élément du tableau.</p>
 </li>
 <li>
-<p><strong>Application de la Fonction de Rappel</strong></p>
+<p><strong>Application de la Fonction de Rappel :</strong></p>
 </li>
 <li>
-<p>À chaque élément, la fonction de rappel est appelée, recevant l'élément courant, son indice et le tableau lui-même en tant qu'arguments.</p>
+<p>À chaque élément, la fonction de rappel est appelée.</p>
 </li>
 <li>
-<p><strong>Transformation des Éléments :</strong></p>
+<p>Si la fonction de rappel renvoie une valeur truthy pour un élément, cet élément est ajouté au nouveau tableau.</p>
 </li>
 <li>
-<p>La fonction de rappel effectue une opération ou une transformation sur l'élément courant et renvoie un nouveau résultat.</p>
+<p><strong>Création d'un Nouveau Tableau :</strong></p>
 </li>
 <li>
-<p><strong>Construction d'un Nouveau Tableau</strong></p>
+<p>Les éléments qui passent le test (pour lesquels la fonction de rappel renvoie <code>true</code>) sont collectés dans un nouveau tableau.</p>
 </li>
 <li>
-<p>Les valeurs renvoyées par la fonction de rappel pour chaque élément sont rassemblées dans un nouveau tableau.</p>
+<p><strong>Renvoi du Nouveau Tableau :</strong></p>
 </li>
 <li>
-<p><strong>Renvoi du Nouveau Tableau</strong></p>
-</li>
-<li>
-<p>Une fois tous les éléments traités, le nouveau tableau transformé est renvoyé.</p>
+<p>Après avoir parcouru tous les éléments, <code>filter()</code> renvoie un nouveau tableau contenant les éléments filtrés.</p>
 </li>
 </ol>
-<h3 id="exemple-dutilisation">Exemple d'Utilisation<a class="headerlink" href="#exemple-dutilisation" title="Permanent link">&para;</a></h3>
-<p>Supposons que nous ayons un tableau de nombres et que nous voulions créer un nouveau tableau avec le carré de chaque nombre :</p>
+<h2 id="exemple-dutilisation">Exemple d'Utilisation :<a class="headerlink" href="#exemple-dutilisation" title="Permanent link">&para;</a></h2>
+<p>Filtrer un tableau pour conserver uniquement les nombres pairs :</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">number</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">number</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">evenNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">number</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">squares</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 4, 9, 16, 25]</span>
+<span class="c1">// evenNumbers est maintenant [2, 4]</span>
 </code></pre></div>
-<p>Dans cet exemple, <code>map()</code> est utilisé pour calculer le carré de chaque élément du tableau <code>numbers</code>. Le résultat est un nouveau tableau <code>squares</code> contenant ces carrés.</p>
-<h3 id="points-importants">Points Importants<a class="headerlink" href="#points-importants" title="Permanent link">&para;</a></h3>
+<p>Dans cet exemple, <code>filter()</code> passe en revue chaque élément du tableau <code>numbers</code>. La fonction de rappel teste si chaque nombre est pair. Si c'est le cas, ce nombre est inclus dans <code>evenNumbers</code>.</p>
+<h2 id="utilisations-courantes-de-filter">Utilisations courantes de <code>filter()</code> :<a class="headerlink" href="#utilisations-courantes-de-filter" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><code>map()</code> est souvent utilisé pour transformer des données, notamment en manipulant des tableaux d'objets, en extrayant des sous-ensembles de données ou en convertissant des types de données.</p>
+<p>Filtrer des données en fonction de critères spécifiques.</p>
 </li>
 <li>
-<p>Contrairement à d'autres méthodes comme <code>forEach()</code>, <code>map()</code> renvoie toujours un nouveau tableau, ce qui le rend particulièrement utile dans la programmation fonctionnelle.</p>
+<p>Créer des sous-ensembles d'un tableau sans modifier le tableau original.</p>
 </li>
 <li>
-<p><code>map()</code> n'affecte pas la taille du tableau original, mais la valeur de chaque élément peut être transformée. Si aucun élément n'est transformé, le tableau résultant aura la même taille que le tableau original.</p>
+<p>Être chaînée avec d'autres méthodes de tableau, comme <code>map()</code> ou <code>reduce()</code>, pour des transformations de données complexes.</p>
 </li>
 </ul>
-<p>La fonction <code>map()</code> en JavaScript est une méthode de l'objet Array qui permet de créer un nouveau tableau en transformant chaque élément du tableau original à l'aide d'une fonction de rappel. L'argument <code>thisArg</code> dans <code>map()</code> est un paramètre optionnel qui permet de spécifier le contexte (<code>this</code>) pour la fonction de rappel.</p>
-<h2 id="exemples-simple">Exemples simple<a class="headerlink" href="#exemples-simple" title="Permanent link">&para;</a></h2>
-<h3 id="1-transformation-delements">1. <strong>Transformation d'Éléments</strong><a class="headerlink" href="#1-transformation-delements" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Modifier chaque élément d'un tableau.</p>
-</li>
-<li>
-<p>Exemple : Doubler chaque nombre dans un tableau de nombres.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">doubled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="2-extraction-de-proprietes-dobjets">2. <strong>Extraction de Propriétés d'Objets</strong><a class="headerlink" href="#2-extraction-de-proprietes-dobjets" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Extraire une propriété spécifique de chaque objet dans un tableau d'objets.</p>
-</li>
-<li>
-<p>Exemple : Obtenir un tableau des noms à partir d'un tableau d'utilisateurs.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">}];</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">users</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="3-conversion-de-types-de-donnees">3. <strong>Conversion de Types de Données</strong><a class="headerlink" href="#3-conversion-de-types-de-donnees" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Transformer les types de données des éléments d'un tableau.</p>
-</li>
-<li>
-<p>Exemple : Convertir un tableau de chaînes de caractères en nombres.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">stringNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">];</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">stringNumbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="4-appliquer-une-fonction-complexes">4. <strong>Appliquer une Fonction Complexes</strong><a class="headerlink" href="#4-appliquer-une-fonction-complexes" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Appliquer une logique complexe ou une fonction personnalisée à chaque élément.</p>
-</li>
-<li>
-<p>Exemple : Ajouter une nouvelle propriété à chaque objet dans un tableau.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;chair&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;table&quot;</span><span class="p">}];</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">itemsWithPrices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">}));</span>
-</code></pre></div>
-<h3 id="5-creation-de-nouvelles-structures-de-donnees">5. <strong>Création de Nouvelles Structures de Données</strong><a class="headerlink" href="#5-creation-de-nouvelles-structures-de-donnees" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Générer un nouveau format ou une nouvelle structure de données à partir d'un tableau existant.</p>
-</li>
-<li>
-<p>Exemple : Créer un tableau de messages à partir d'un tableau d'utilisateurs.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">}];</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">messages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">users</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`Bonjour </span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">, vous avez </span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb"> ans.`</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="6-combinaison-avec-dautres-methodes-de-tableau">6. <strong>Combinaison avec d'autres Méthodes de Tableau</strong><a class="headerlink" href="#6-combinaison-avec-dautres-methodes-de-tableau" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Chaîner <code>map()</code> avec d'autres méthodes de tableau pour des opérations plus complexes.</p>
-</li>
-<li>
-<p>Exemple : Utiliser <code>map()</code> et <code>filter()</code> ensemble.</p>
-</li>
-</ul>
+<p>En résumé, <code>filter()</code> est une méthode très pratique pour créer des tableaux dérivés en excluant les éléments qui ne répondent pas à certains critères, tout en préservant l'immuabilité des données d'origine.</p>
+<p>La méthode <code>filter()</code> en JavaScript permet de créer un nouveau tableau contenant tous les éléments d'un tableau existant qui satisfont à une condition définie par une fonction de rappel. L'argument <code>thisArg</code> dans <code>filter()</code> est une caractéristique un peu plus avancée, qui permet de spécifier le contexte (<code>this</code>) dans lequel la fonction de rappel doit être exécutée.</p>
+<h2 id="utilisation-de-thisarg">Utilisation de <code>thisArg</code><a class="headerlink" href="#utilisation-de-thisarg" title="Permanent link">&para;</a></h2>
+<p>La valeur <code>thisArg</code> est utilisée pour définir ce que sera <code>this</code> dans la fonction de rappel. C'est utile lorsque vous avez besoin de faire référence à un certain contexte (comme un objet) dans votre fonction de rappel.</p>
+<h2 id="exemple-sans-thisarg">Exemple Sans <code>thisArg</code><a class="headerlink" href="#exemple-sans-thisarg" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">doubledEvenNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="7-mappage-avec-index-ou-tableau-complet">7. <strong>Mappage avec Index ou Tableau Complet</strong><a class="headerlink" href="#7-mappage-avec-index-ou-tableau-complet" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Utiliser l'indice de l'élément ou le tableau complet pour des opérations plus avancées.</p>
-</li>
-<li>
-<p>Exemple : Utiliser l'indice pour modifier les éléments.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;first&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;second&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;third&quot;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">oddNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">indexedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">index</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">indexedItems</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="8-operations-mathematiques-ou-algorithmiques">8. <strong>Opérations Mathématiques ou Algorithmiques</strong><a class="headerlink" href="#8-operations-mathematiques-ou-algorithmiques" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Effectuer des calculs complexes ou des algorithmes sur les éléments d'un tableau.</p>
-</li>
-<li>
-<p>Exemple : Calculer le carré de chaque nombre d'un tableau.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num</span><span class="p">);</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">squares</span><span class="p">)</span>
-</code></pre></div>
-<p><code>map()</code> est une méthode de tableau très puissante qui est largement utilisée pour sa capacité à transformer facilement les éléments d'un tableau, tout en gardant le tableau original inchangé.</p>
-<p><br></p>
-<hr>
-
-<p><br></p>
-<h2 id="thisarg"><code>thisArg</code><a class="headerlink" href="#thisarg" title="Permanent link">&para;</a></h2>
-<p>L'argument <code>thisArg</code> est utilisé pour définir le contexte (<code>this</code>) dans lequel la fonction de rappel est exécutée. Cela peut être particulièrement utile lorsque vous souhaitez accéder à des propriétés ou des méthodes d'un objet spécifique dans votre fonction de rappel.</p>
-<h4 id="exemple-sans-thisarg">Exemple sans <code>thisArg</code><a class="headerlink" href="#exemple-sans-thisarg" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-
-<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
+<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 
 <span class="p">});</span>
 </code></pre></div>
-<p>Dans cet exemple, la fonction de rappel calcule le carré de chaque nombre. <code>this</code> dans la fonction de rappel n'est pas défini ou se réfère à l'objet global.</p>
-<h4 id="exemple-avec-thisarg">Exemple avec <code>thisArg</code><a class="headerlink" href="#exemple-avec-thisarg" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p>Ici, <code>this</code> dans la fonction de rappel n'est pas défini ou se réfère à l'objet global (<code>window</code> dans les navigateurs, <code>global</code> dans Node.js).</p>
+<h2 id="exemple-avec-thisarg">Exemple Avec <code>thisArg</code><a class="headerlink" href="#exemple-avec-thisarg" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">isSmallerThanThreshold</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">multiplier</span><span class="p">;</span>
+<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">threshold</span><span class="p">;</span>
 
 <span class="p">}</span>
 
@@ -1457,24 +1442,108 @@ debugInConsole: false # Print debug info in Obsidian console
 
 <span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">multiplierObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">multiplier</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">thresholdObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">threshold</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="p">};</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">multipliedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">multiply</span><span class="p">,</span><span class="w"> </span><span class="nx">multiplierObject</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">smallerNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isSmallerThanThreshold</span><span class="p">,</span><span class="w"> </span><span class="nx">thresholdObject</span><span class="p">);</span>
 </code></pre></div>
-<p>Ici, la fonction <code>multiply</code> utilise <code>this.multiplier</code>. Lorsque <code>map()</code> est appelé, <code>multiplierObject</code> est passé comme <code>thisArg</code>, ce qui fait que <code>this</code> dans <code>multiply</code> se réfère à <code>multiplierObject</code>.</p>
-<h3 id="points-importants_1">Points Importants<a class="headerlink" href="#points-importants_1" title="Permanent link">&para;</a></h3>
+<p>Dans cet exemple, <code>isSmallerThanThreshold</code> utilise <code>this.threshold</code>. Lorsque nous appelons <code>filter()</code>, nous passons <code>thresholdObject</code> comme <code>thisArg</code>, donc dans <code>isSmallerThanThreshold</code>, <code>this</code> se réfère à <code>thresholdObject</code>.</p>
+<h2 id="points-importants">Points Importants<a class="headerlink" href="#points-importants" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Si la fonction de rappel est une fonction fléchée (<code>arrow function</code>), <code>thisArg</code> est ignoré car les fonctions fléchées n'ont pas leur propre contexte <code>this</code> ; elles le captent de leur contexte englobant.</p>
+<p><code>thisArg</code> est utile lorsque la fonction de rappel doit accéder à des propriétés ou méthodes d'un objet spécifique.</p>
 </li>
 <li>
-<p><code>map()</code> est utilisée pour les transformations de données et renvoie un nouveau tableau sans modifier le tableau original.</p>
+<p>Si vous n'utilisez pas <code>thisArg</code>, <code>this</code> dans la fonction de rappel se réfère à l'objet global par défaut, ou est <code>undefined</code> en mode strict (<code>'use strict'</code>).</p>
 </li>
 <li>
-<p><code>thisArg</code> est utile pour accéder à des objets ou des fonctions spécifiques dans la fonction de rappel sans avoir à les lier explicitement.</p>
+<p>Les fonctions fléchées n'ont pas leur propre <code>this</code>, donc <code>thisArg</code> est moins utile avec elles. Dans les fonctions fléchées, <code>this</code> est hérité du contexte englobant.</p>
 </li>
 </ul>
-<p>La fonction <code>map()</code> en JavaScript est une méthode très versatile utilisée pour créer un nouveau tableau en transformant chaque élément d'un tableau source. La fonction de rappel utilisée avec <code>map()</code> peut prendre jusqu'à trois arguments : l'élément en cours de traitement, son indice dans le tableau et le tableau lui-même. Ces arguments sont souvent notés comme <code>element</code>, <code>index</code> et <code>array</code>.</p>
+<p>En résumé, <code>filter()</code> avec <code>thisArg</code> vous permet de contrôler le contexte dans lequel la fonction de rappel est exécutée, ce qui peut être très utile dans certaines situations, en particulier lors de l'utilisation de fonctions qui ne sont pas des fonctions fléchées et qui ont besoin d'accéder à un <code>this</code> spécifique.</p>
+<p>L'utilisation de l'argument <code>thisArg</code> avec la méthode <code>filter()</code> en JavaScript permet de définir le contexte (<code>this</code>) dans lequel la fonction de rappel est exécutée. Voici différents exemples illustrant l'utilisation de <code>thisArg</code> avec <code>filter()</code> :</p>
+<h2 id="exemples">Exemples<a class="headerlink" href="#exemples" title="Permanent link">&para;</a></h2>
+<h3 id="filtrage-base-sur-une-propriete-dobjet">Filtrage Basé sur une Propriété d'Objet<a class="headerlink" href="#filtrage-base-sur-une-propriete-dobjet" title="Permanent link">&para;</a></h3>
+<p>Imaginons que nous ayons un objet représentant un filtre et un tableau de nombres. Nous voulons filtrer ce tableau en fonction d'une propriété de l'objet.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">isGreater</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">threshold</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numberSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+
+<span class="nx">threshold</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+
+<span class="nx">numbers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">]</span>
+
+<span class="p">};</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">filteredNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numberSet</span><span class="p">.</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isGreater</span><span class="p">,</span><span class="w"> </span><span class="nx">numberSet</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filteredNumbers</span><span class="p">);</span><span class="w"> </span><span class="c1">// [4, 5]</span>
+</code></pre></div>
+<p>Dans cet exemple, <code>isGreater</code> utilise <code>this.threshold</code> pour filtrer les nombres. <code>numberSet</code> est passé comme <code>thisArg</code>, donc <code>this</code> dans <code>isGreater</code> fait référence à <code>numberSet</code>.</p>
+<h3 id="filtrage-en-utilisant-les-methodes-de-lobjet">Filtrage en Utilisant les Méthodes de l'Objet<a class="headerlink" href="#filtrage-en-utilisant-les-methodes-de-lobjet" title="Permanent link">&para;</a></h3>
+<p>Supposons que nous ayons un objet avec une méthode de filtrage et un tableau de chaînes. Nous utilisons la méthode de l'objet pour filtrer le tableau.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">stringFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+
+<span class="nx">accepted</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;banana&#39;</span><span class="p">],</span>
+
+<span class="nx">filterString</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">accepted</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="p">};</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;banana&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;grape&#39;</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">acceptedFruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fruits</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">stringFilter</span><span class="p">.</span><span class="nx">filterString</span><span class="p">,</span><span class="w"> </span><span class="nx">stringFilter</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">acceptedFruits</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&#39;apple&#39;, &#39;banana&#39;]</span>
+</code></pre></div></p>
+<p>Ici, <code>filterString</code> vérifie si une chaîne fait partie des éléments acceptés définis dans <code>stringFilter</code>. <code>stringFilter</code> est passé en tant que <code>thisArg</code> à <code>filter()</code>.</p>
+<h3 id="utilisation-avec-des-methodes-de-classe">Utilisation avec des Méthodes de Classe<a class="headerlink" href="#utilisation-avec-des-methodes-de-classe" title="Permanent link">&para;</a></h3>
+<p>Si vous travaillez avec des classes en JavaScript, vous pouvez également utiliser <code>thisArg</code> pour passer une instance de classe à la fonction de rappel.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">NumberChecker</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kr">constructor</span><span class="p">(</span><span class="nx">limit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">limit</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="nx">checkNumber</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">checker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NumberChecker</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbersBelowLimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">checker</span><span class="p">.</span><span class="nx">checkNumber</span><span class="p">,</span><span class="w"> </span><span class="nx">checker</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbersBelowLimit</span><span class="p">);</span><span class="w"> </span><span class="c1">// [5, 8]</span>
+</code></pre></div>
+<p>Dans cet exemple, <code>checkNumber</code> est une méthode de l'instance <code>checker</code> de <code>NumberChecker</code>. En passant <code>checker</code> en tant que <code>thisArg</code>, <code>this.limit</code> dans <code>checkNumber</code> se réfère à la propriété <code>limit</code> de l'instance <code>checker</code>.</p>
+<p>Ces exemples montrent comment <code>thisArg</code> peut être utilisé avec <code>filter()</code> pour contrôler le contexte de la fonction de rappel, rendant ainsi le filtrage flexible et adapté à divers scénarios.</p>
+<p><br></p>
+<hr>
 
 
 

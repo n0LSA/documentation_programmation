@@ -2,22 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html</loc>
-         <lastmod>2025-01-05</lastmod>
+         <lastmod>2025-01-12</lastmod>
     </url>
     <url>
          <loc>https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/Objet%20-%20notation%20dynamique.html</loc>
-         <lastmod>2025-01-05</lastmod>
+         <lastmod>2025-01-12</lastmod>
     </url>
     <url>
          <loc>https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/destructuration.html</loc>
-         <lastmod>2025-01-05</lastmod>
+         <lastmod>2025-01-12</lastmod>
     </url>
     <url>
          <loc>https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/javascript.html</loc>
-         <lastmod>2025-01-05</lastmod>
+         <lastmod>2025-01-12</lastmod>
     </url>
     <url>
-         <loc>https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map-p1.html</loc>
-         <lastmod>2025-01-05</lastmod>
+         <loc>https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-2.html</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map_partie-1.html</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map_partie-2_thisarg.html</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map_partie-3_index-array.html</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map_partie-4_thisarg-index-array.html</loc>
+         <lastmod>2025-01-12</lastmod>
     </url>
 </urlset>

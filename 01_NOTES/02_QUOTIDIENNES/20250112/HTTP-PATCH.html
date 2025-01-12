@@ -12,22 +12,28 @@
         <meta name="author" content="n0LSA">
       
       
+        <link rel="canonical" href="https://n0LSA.github.io/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html">
       
       
+        <link rel="prev" href="../20250104/javascript.html">
       
-      <link rel="icon" href="/documentation_programmation/assets/images/favicon.png">
+      
+        <link rel="next" href="Template-Literals_String.raw_%24_Prop-objets.html">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>documentation_programmation</title>
+        <title>HTTP PATCH - documentation_programmation</title>
       
     
     
-      <link rel="stylesheet" href="/documentation_programmation/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/documentation_programmation/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -40,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="/documentation_programmation/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/documentation_programmation/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-la-methode-http-get" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/documentation_programmation/." title="documentation_programmation" class="md-header__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+    <a href="../../.." title="documentation_programmation" class="md-header__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
@@ -97,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              HTTP PATCH
             
           </span>
         </div>
@@ -202,23 +213,29 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-tabs__link">
           
   
   01 NOTES
@@ -260,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html" class="md-tabs__link">
+        <a href="../../../javascript/methods-class/Array/filter/filter_partie-1.html" class="md-tabs__link">
           
   
   Javascript
@@ -302,7 +319,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/documentation_programmation/." title="documentation_programmation" class="md-nav__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+    <a href="../../.." title="documentation_programmation" class="md-nav__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
@@ -329,23 +346,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -356,7 +378,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             01 NOTES
@@ -367,6 +389,8 @@
                 
   
   
+    
+  
   
   
     
@@ -376,11 +400,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -394,7 +418,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             02 QUOTIDIENNES
@@ -446,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-nav__link">
+      <a href="../20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/Objet%20-%20notation%20dynamique.html" class="md-nav__link">
+      <a href="../20250104/Objet%20-%20notation%20dynamique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/destructuration.html" class="md-nav__link">
+      <a href="../20250104/destructuration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/javascript.html" class="md-nav__link">
+      <a href="../20250104/javascript.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,6 +559,8 @@
                 
   
   
+    
+  
   
   
     
@@ -544,11 +570,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
@@ -562,7 +588,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_1_2">
             <span class="md-nav__icon md-icon"></span>
             20250112
@@ -573,10 +599,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    HTTP PATCH
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HTTP-PATCH.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -585,6 +629,135 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-la-methode-http-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. La méthode HTTP GET
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. La méthode HTTP GET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Définition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-caracteristiques-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Caractéristiques principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-exemples-concrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Exemples concrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-methode-http-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. La méthode HTTP PATCH
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. La méthode HTTP PATCH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Définition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-caracteristiques-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Caractéristiques principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-exemples-concrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Exemples concrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-comparaison-entre-get-et-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Comparaison entre GET et PATCH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-quest-ce-quune-requete-patch-en-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Qu’est-ce qu’une requête PATCH en résumé ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -597,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html" class="md-nav__link">
+      <a href="Template-Literals_String.raw_%24_Prop-objets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html" class="md-nav__link">
+      <a href="../../../javascript/methods-class/Array/filter/filter_partie-1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-2.html" class="md-nav__link">
+      <a href="../../../javascript/methods-class/Array/filter/filter_partie-2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -881,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-1.html" class="md-nav__link">
+      <a href="../../../javascript/methods-class/Array/map/map_partie-1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-2_thisarg.html" class="md-nav__link">
+      <a href="../../../javascript/methods-class/Array/map/map_partie-2_thisarg.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -923,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-3_index-array.html" class="md-nav__link">
+      <a href="../../../javascript/methods-class/Array/map/map_partie-3_index-array.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-4_thisarg-index-array.html" class="md-nav__link">
+      <a href="../../../javascript/methods-class/Array/map/map_partie-4_thisarg-index-array.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,6 +1180,125 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-la-methode-http-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. La méthode HTTP GET
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. La méthode HTTP GET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Définition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-caracteristiques-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Caractéristiques principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-exemples-concrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Exemples concrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-methode-http-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. La méthode HTTP PATCH
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. La méthode HTTP PATCH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Définition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-caracteristiques-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Caractéristiques principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-exemples-concrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Exemples concrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-comparaison-entre-get-et-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Comparaison entre GET et PATCH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-quest-ce-quune-requete-patch-en-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Qu’est-ce qu’une requête PATCH en résumé ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1017,8 +1309,166 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+    
+      
+    
+    <a href="https://github.com/n0LSA/documentation_programmation/raw/main/docs/01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+  <h1>HTTP PATCH</h1>
+
+<p><strong>Analyse du PROMPT et intentions de réponse</strong><br />
+Vous cherchez à comprendre la différence entre la méthode HTTP <code>GET</code> et la méthode HTTP <code>PATCH</code>. Plus précisément, vous voulez savoir ce qu’est une requête <code>PATCH</code> et en quoi elle se distingue d’une requête <code>GET</code>.</p>
+<p>Mon intention est de :</p>
+<ol>
+<li>Définir la méthode HTTP <code>GET</code> et son usage courant.</li>
+<li>Définir la méthode HTTP <code>PATCH</code>, son concept et sa finalité.</li>
+<li>Comparer de manière claire et détaillée les deux méthodes.</li>
+</ol>
+<hr />
+<h2 id="1-la-methode-http-get">1. La méthode HTTP <code>GET</code><a class="headerlink" href="#1-la-methode-http-get" title="Permanent link">&para;</a></h2>
+<h3 id="11-definition">1.1 Définition<a class="headerlink" href="#11-definition" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>GET</code></strong> est la méthode HTTP la plus courante, utilisée pour <strong>récupérer (lire)</strong> des ressources depuis un serveur.</li>
+<li>Lorsque vous tapez l’URL d’un site web dans votre navigateur, c’est majoritairement une requête <code>GET</code> qui est envoyée pour charger la page.</li>
+</ul>
+<h3 id="12-caracteristiques-principales">1.2 Caractéristiques principales<a class="headerlink" href="#12-caracteristiques-principales" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pas de modification du serveur</strong> : Une requête <code>GET</code> <strong>ne devrait pas</strong> modifier ou altérer les données côté serveur. Elle est considérée comme sûre (“safe” en termes HTTP).</li>
+<li><strong>Pas d’effet de bord</strong> : En théorie, un appel <code>GET</code> ne provoque pas d’effets secondaires (pas d’enregistrement en base de données, pas de mise à jour, etc.).</li>
+<li><strong>Pas de corps de requête</strong> : Généralement, les requêtes <code>GET</code> n’ont pas de body (même si techniquement, ce n’est pas interdit, ça n’a pas vraiment de sens dans la pratique).</li>
+<li><strong>Transfert d’informations</strong> : Les paramètres sont souvent passés dans l’URL (query parameters).</li>
+</ul>
+<h3 id="13-exemples-concrets">1.3 Exemples concrets<a class="headerlink" href="#13-exemples-concrets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Afficher la liste de tous les utilisateurs</strong> :</p>
+<div class="highlight"><pre><span></span><code>GET /api/users
+</code></pre></div>
+<p>Renvoie la liste complète.
+- <strong>Afficher le détail d’un utilisateur</strong> :</p>
+<div class="highlight"><pre><span></span><code>GET /api/users/12
+</code></pre></div>
+<p>Renvoie la ressource correspondant à l’utilisateur d’ID <code>12</code>.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-la-methode-http-patch">2. La méthode HTTP <code>PATCH</code><a class="headerlink" href="#2-la-methode-http-patch" title="Permanent link">&para;</a></h2>
+<h3 id="21-definition">2.1 Définition<a class="headerlink" href="#21-definition" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>PATCH</code></strong> est une méthode HTTP plus récente (normalisée dans <a href="https://datatracker.ietf.org/doc/html/rfc5789">RFC 5789</a>) permettant de <strong>mettre à jour partiellement</strong> une ressource sur un serveur.</li>
+</ul>
+<h3 id="22-caracteristiques-principales">2.2 Caractéristiques principales<a class="headerlink" href="#22-caracteristiques-principales" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Mise à jour partielle</strong> : Contrairement à <code>PUT</code> qui est censé remplacer la ressource entière, <code>PATCH</code> se concentre sur la mise à jour <strong>de certaines parties</strong> de la ressource.</li>
+<li><strong>Utilisation d’un corps de requête</strong> : On envoie généralement un <strong>body JSON</strong> (ou autre format) décrivant les champs à modifier et leurs nouvelles valeurs.</li>
+<li><strong>Économie de données</strong> : Au lieu de renvoyer toute la ressource complète (et risquer d’écraser des champs), on ne précise que les champs à modifier.</li>
+<li><strong>Non-idempotente ou idempotente</strong> : Le caractère idempotent ou non varie en fonction de l’implémentation. En pratique, on considère souvent <code>PATCH</code> comme potentiellement non-idempotente. Par exemple, si vous appelez deux fois de suite un <code>PATCH</code> qui <strong>ajoute</strong> un élément à un tableau, vous pourriez vous retrouver avec deux ajouts, alors qu’un <code>PUT</code> viserait plutôt à remplacer ou définir une version complète.</li>
+</ul>
+<h3 id="23-exemples-concrets">2.3 Exemples concrets<a class="headerlink" href="#23-exemples-concrets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Mise à jour partielle d’un utilisateur</strong> :</p>
+<div class="highlight"><pre><span></span><code>PATCH /api/users/12
+</code></pre></div>
+<p>Body JSON :</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;new_email@example.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Cela mettrait à jour uniquement le champ <code>email</code> de l’utilisateur d’ID <code>12</code>, sans toucher aux autres champs.</p>
+</li>
+<li>
+<p><strong>Mise à jour du champ <code>status</code></strong> (comme dans vos précédents exemples) :</p>
+<div class="highlight"><pre><span></span><code>PATCH /api/devices/12/status
+</code></pre></div>
+<p>Body JSON :</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ici, on ne met à jour que la colonne <code>status</code> du device <code>12</code>.</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-comparaison-entre-get-et-patch">3. Comparaison entre <code>GET</code> et <code>PATCH</code><a class="headerlink" href="#3-comparaison-entre-get-et-patch" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th><strong>GET</strong></th>
+<th><strong>PATCH</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objectif</strong></td>
+<td>Obtenir (lire) une ressource</td>
+<td>Mettre à jour <strong>partiellement</strong> une ressource existante</td>
+</tr>
+<tr>
+<td><strong>Effet côté serveur</strong></td>
+<td>Ne doit pas modifier la ressource</td>
+<td>Modifie une (ou plusieurs) partie(s) de la ressource</td>
+</tr>
+<tr>
+<td><strong>Méthode HTTP sûre</strong></td>
+<td>Oui, considérée comme “safe” et “idempotent”</td>
+<td>Non, peut générer des modifications en base</td>
+</tr>
+<tr>
+<td><strong>Corps de requête</strong></td>
+<td>Généralement absent</td>
+<td>Présent (souvent JSON) décrivant les modifications</td>
+</tr>
+<tr>
+<td><strong>Exemple d’usage</strong></td>
+<td>Lire une liste, lire un item précis</td>
+<td>Mettre à jour un champ d’un enregistrement (ex. <code>status</code>)</td>
+</tr>
+<tr>
+<td><strong>Standards</strong></td>
+<td>Défini dès l’origine du protocole HTTP</td>
+<td>Standardisé par la RFC 5789 depuis 2010</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-quest-ce-quune-requete-patch-en-resume">4. Qu’est-ce qu’une requête <code>PATCH</code> en résumé ?<a class="headerlink" href="#4-quest-ce-quune-requete-patch-en-resume" title="Permanent link">&para;</a></h2>
+<ul>
+<li>C’est une requête HTTP <strong>destinée à mettre à jour uniquement certaines parties</strong> d’une ressource existante, au lieu de remplacer la ressource en entier.</li>
+<li>Elle se distingue de <code>PUT</code> (qui remplace la ressource en entier) et de <code>POST</code> (qui crée une nouvelle ressource).</li>
+<li>Elle n’a pas pour but de renvoyer du contenu sans modification (contrairement à <code>GET</code>).</li>
+<li>Dans une API REST, on utilise <code>PATCH</code> lorsqu’on veut modifier un ou plusieurs champs d’un objet tout en conservant les autres champs inchangés.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>GET</strong> : sert à <strong>lire</strong> des données, n’a pas pour but de les modifier et ne transporte pas (en principe) de body pertinent.</li>
+<li><strong>PATCH</strong> : sert à <strong>modifier partiellement</strong> une ressource existante, nécessite en général un body JSON décrivant précisément les mises à jour à effectuer.</li>
+</ul>
+<p>Dans le cadre d’une API REST, <code>GET</code> est parfait pour récupérer des informations, tandis que <code>PATCH</code> est recommandé quand vous souhaitez modifier uniquement <strong>certaines propriétés</strong> d’une ressource sans avoir à envoyer toute la ressource complète, comme dans l’exemple de mise à jour du champ <code>status</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1072,12 +1522,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/documentation_programmation/", "features": ["content.action.view", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "/documentation_programmation/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/documentation_programmation/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="/documentation_programmation/javascripts/config.js"></script>
+        <script src="../../../javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

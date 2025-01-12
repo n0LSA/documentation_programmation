@@ -12,22 +12,28 @@
         <meta name="author" content="n0LSA">
       
       
+        <link rel="canonical" href="https://n0LSA.github.io/documentation_programmation/javascript/methods-class/Array/map/map_partie-2_thisarg.html">
       
       
+        <link rel="prev" href="map_partie-1.html">
       
-      <link rel="icon" href="/documentation_programmation/assets/images/favicon.png">
+      
+        <link rel="next" href="map_partie-3_index-array.html">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>documentation_programmation</title>
+        <title>Map partie 2 thisarg - documentation_programmation</title>
       
     
     
-      <link rel="stylesheet" href="/documentation_programmation/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/documentation_programmation/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -40,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="/documentation_programmation/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/documentation_programmation/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#utilisation-de-thisarg" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/documentation_programmation/." title="documentation_programmation" class="md-header__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+    <a href="../../../.." title="documentation_programmation" class="md-header__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
@@ -97,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Map partie 2 thisarg
             
           </span>
         </div>
@@ -218,7 +229,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-tabs__link">
+        <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-tabs__link">
           
   
   01 NOTES
@@ -238,17 +249,7 @@
         
   
   
-  
     
-    
-      
-  
-  
-  
-    
-    
-      
-  
   
   
     
@@ -256,11 +257,29 @@
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html" class="md-tabs__link">
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../filter/filter_partie-1.html" class="md-tabs__link">
           
   
   Javascript
@@ -302,7 +321,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/documentation_programmation/." title="documentation_programmation" class="md-nav__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
+    <a href="../../../.." title="documentation_programmation" class="md-nav__button md-logo" aria-label="documentation_programmation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg>
@@ -446,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/L%E2%80%99op%C3%A9rateur%20....html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/Objet%20-%20notation%20dynamique.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/Objet%20-%20notation%20dynamique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/destructuration.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/destructuration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250104/javascript.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250104/javascript.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250112/HTTP-PATCH.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -597,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html" class="md-nav__link">
+      <a href="../../../../01_NOTES/02_QUOTIDIENNES/20250112/Template-Literals_String.raw_%24_Prop-objets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,23 +657,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -665,7 +689,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Javascript
@@ -676,6 +700,8 @@
                 
   
   
+    
+  
   
   
     
@@ -685,11 +711,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -703,7 +729,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Methods class
@@ -714,6 +740,8 @@
                 
   
   
+    
+  
   
   
     
@@ -723,11 +751,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
@@ -741,7 +769,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             Array
@@ -793,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-1.html" class="md-nav__link">
+      <a href="../filter/filter_partie-1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/filter/filter_partie-2.html" class="md-nav__link">
+      <a href="../filter/filter_partie-2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,6 +868,8 @@
                 
   
   
+    
+  
   
   
     
@@ -849,11 +879,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
@@ -867,7 +897,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1_2">
             <span class="md-nav__icon md-icon"></span>
             Map
@@ -881,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-1.html" class="md-nav__link">
+      <a href="map_partie-1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,10 +929,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-2_thisarg.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Map partie 2 thisarg
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="map_partie-2_thisarg.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -911,6 +959,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      utilisation de thisArg
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="utilisation de thisArg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-acces-aux-proprietes-de-lobjet-dans-la-fonction-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Accès aux Propriétés de l'Objet dans la Fonction de Rappel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilisation-dans-les-methodes-de-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilisation dans les Méthodes de Classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-modification-du-comportement-de-la-fonction-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Modification du Comportement de la Fonction de Rappel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-utilisation-avec-des-objets-litteraux" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Utilisation avec des Objets Littéraux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points Importants
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -923,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-3_index-array.html" class="md-nav__link">
+      <a href="map_partie-3_index-array.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentation_programmation/javascript/methods-class/Array/map/map_partie-4_thisarg-index-array.html" class="md-nav__link">
+      <a href="map_partie-4_thisarg-index-array.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,6 +1133,74 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      utilisation de thisArg
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="utilisation de thisArg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-acces-aux-proprietes-de-lobjet-dans-la-fonction-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Accès aux Propriétés de l'Objet dans la Fonction de Rappel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilisation-dans-les-methodes-de-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilisation dans les Méthodes de Classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-modification-du-comportement-de-la-fonction-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Modification du Comportement de la Fonction de Rappel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-utilisation-avec-des-objets-litteraux" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Utilisation avec des Objets Littéraux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points Importants
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1017,8 +1211,135 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+    
+      
+    
+    <a href="https://github.com/n0LSA/documentation_programmation/raw/main/docs/javascript/methods-class/Array/map/map_partie-2_thisarg.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+  <h1>Map partie 2 thisarg</h1>
+
+<h3 id="utilisation-de-thisarg">utilisation de <code>thisArg</code><a class="headerlink" href="#utilisation-de-thisarg" title="Permanent link">&para;</a></h3>
+<p>L'utilisation de <code>thisArg</code> avec la méthode <code>map()</code> en JavaScript permet de définir le contexte (<code>this</code>) dans lequel la fonction de rappel est exécutée. Voici différentes façons d'utiliser <code>map()</code> avec <code>thisArg</code> :</p>
+<h4 id="1-acces-aux-proprietes-de-lobjet-dans-la-fonction-de-rappel">1. Accès aux Propriétés de l'Objet dans la Fonction de Rappel<a class="headerlink" href="#1-acces-aux-proprietes-de-lobjet-dans-la-fonction-de-rappel" title="Permanent link">&para;</a></h4>
+<p>Vous pouvez utiliser <code>thisArg</code> pour accéder aux propriétés d'un objet spécifique dans votre fonction de rappel.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">multiplyByMultiplier</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">multiplier</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">multiplierObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">multiplier</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">multipliedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">multiplyByMultiplier</span><span class="p">,</span><span class="w"> </span><span class="nx">multiplierObj</span><span class="p">);</span>
+
+<span class="c1">// multipliedNumbers = [5, 10, 15]</span>
+</code></pre></div>
+<p>Ici, <code>multiplyByMultiplier</code> utilise <code>this.multiplier</code> où <code>this</code> est lié à <code>multiplierObj</code> grâce à <code>thisArg</code>.</p>
+<h4 id="2-utilisation-dans-les-methodes-de-classe">2. Utilisation dans les Méthodes de Classe<a class="headerlink" href="#2-utilisation-dans-les-methodes-de-classe" title="Permanent link">&para;</a></h4>
+<p>Si vous travaillez avec des classes, <code>thisArg</code> peut être utilisé pour passer une instance de classe à la fonction de rappel.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">NumberProcessor</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kr">constructor</span><span class="p">(</span><span class="nx">factor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">factor</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="nx">multiply</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">factor</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">processor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NumberProcessor</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">processedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">processor</span><span class="p">.</span><span class="nx">multiply</span><span class="p">,</span><span class="w"> </span><span class="nx">processor</span><span class="p">);</span>
+
+<span class="c1">// processedNumbers = [2, 4, 6]</span>
+</code></pre></div>
+<h4 id="3-modification-du-comportement-de-la-fonction-de-rappel">3. Modification du Comportement de la Fonction de Rappel<a class="headerlink" href="#3-modification-du-comportement-de-la-fonction-de-rappel" title="Permanent link">&para;</a></h4>
+<p><code>thisArg</code> peut être utilisé pour changer le comportement de la fonction de rappel en fonction du contexte.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">addPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">prefix</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">strings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;two&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;three&quot;</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prefix</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Number &quot;</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">prefixedStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strings</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addPrefix</span><span class="p">,</span><span class="w"> </span><span class="nx">context</span><span class="p">);</span>
+
+<span class="c1">// prefixedStrings = [&quot;Number one&quot;, &quot;Number two&quot;, &quot;Number three&quot;]</span>
+</code></pre></div>
+<h4 id="4-utilisation-avec-des-objets-litteraux">4. Utilisation avec des Objets Littéraux<a class="headerlink" href="#4-utilisation-avec-des-objets-litteraux" title="Permanent link">&para;</a></h4>
+<p>Vous pouvez passer un objet littéral comme <code>thisArg</code> pour accéder à ses propriétés dans la fonction de rappel.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calculatePercentage</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">total</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">totalObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">total</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">percentages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">values</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">calculatePercentage</span><span class="p">,</span><span class="w"> </span><span class="nx">totalObj</span><span class="p">);</span>
+
+<span class="c1">// percentages = [20, 30, 50]</span>
+</code></pre></div>
+<h3 id="points-importants">Points Importants<a class="headerlink" href="#points-importants" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Si vous utilisez des fonctions fléchées comme fonctions de rappel, <code>thisArg</code> est ignoré car les fonctions fléchées n'ont pas leur propre <code>this</code>. Elles capturent <code>this</code> de leur contexte englobant.</p>
+</li>
+<li>
+<p><code>thisArg</code> est utile lorsque vous voulez que la fonction de rappel ait accès à des propriétés ou des méthodes d'un objet spécifique.</p>
+</li>
+<li>
+<p><code>map()</code> crée toujours un nouveau tableau et ne modifie pas le tableau original.</p>
+</li>
+</ul>
+<p>Ces exemples montrent comment <code>thisArg</code> peut être utilisé pour personnaliser le contexte d'exécution de la fonction de rappel dans <code>map()</code>, ce qui rend cette méthode encore plus flexible et puissante pour manipuler des tableaux.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1072,12 +1393,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/documentation_programmation/", "features": ["content.action.view", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "/documentation_programmation/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.view", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/documentation_programmation/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="/documentation_programmation/javascripts/config.js"></script>
+        <script src="../../../../javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
